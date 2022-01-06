@@ -11,6 +11,7 @@ jobs:
         with:
           MY_NAME: "MonaBuild"
           MY_SECRET: ${{ secrets.MY_SECRET }}
+      - run: cat testfile
         
   
   test:
