@@ -12,7 +12,9 @@ jobs:
           MY_NAME: "MonaBuild"
           MY_SECRET: ${{ secrets.MY_SECRET }}
       - run: cat testfile
-      - run: env      
+      - run: env
+        env:
+          MY_SECRET: ${{ secrets.MY_SECRET }}
   
   test:
     name: Hello world test action
