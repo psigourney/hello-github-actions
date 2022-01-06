@@ -10,6 +10,8 @@ jobs:
       - uses: ./action-a
         with:
           MY_NAME: "MonaBuild"
+          MY_SECRET: ${{ secrets.MY_SECRET }}
+        
   
   test:
     name: Hello world test action
@@ -19,3 +21,4 @@ jobs:
       - uses: ./action-a
         with:
           MY_NAME: "MonaTest"
+          MY_SECRET: ${{ secrets.MY_SECRET }}
