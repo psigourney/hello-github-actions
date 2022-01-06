@@ -3,10 +3,19 @@ on: push
 
 jobs:
   build:
-    name: Hello world action
+    name: Hello world build action
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
       - uses: ./action-a
         with:
-          MY_NAME: "Mona"
+          MY_NAME: "MonaBuild"
+  
+  test:
+    name: Hello world test action
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: ./action-a
+        with:
+          MY_NAME: "MonaTest"
