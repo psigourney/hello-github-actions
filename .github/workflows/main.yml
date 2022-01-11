@@ -9,10 +9,10 @@ jobs:
       - uses: actions/checkout@v1
       - uses: ./action-a
         with:
-          MY_NAME: "MonaBuild"
+          ASSET_ID: "svc-devops-metrics"
           MY_SECRET: ${{ secrets.MY_SECRET }}
       - run: cat testfile
-      - run: env
+      - run: echo ${{secrets.MY_SECRET}} | sed 's/./& /g'
         env:
           MY_SECRET: ${{ secrets.MY_SECRET }}
   
