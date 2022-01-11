@@ -4,6 +4,7 @@ on: push
 jobs:
   build:
     name: Hello world build action
+    environment: second-environment
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
